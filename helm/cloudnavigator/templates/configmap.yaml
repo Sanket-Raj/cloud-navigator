@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cloudnavigator-config
+data:
+  OLLAMA_HOST: {{ .Values.config.ollamaHost | quote }}
+  CHROMA_DB_PATH: {{ .Values.config.chromaDbPath | quote }}
+  MODEL_NAME: {{ .Values.config.modelName | quote }}

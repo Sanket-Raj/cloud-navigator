@@ -1,0 +1,14 @@
+[
+  {
+    "source": "aws",
+    "target": "azure",
+    "level": "medium",
+    "reasons": ["Data egress costs", "Identity provider migration"]
+  },
+  {
+    "source": "aws",
+    "target": "oci",
+    "level": "low",
+    "reasons": ["Similar IAM model"]
+  }
+]

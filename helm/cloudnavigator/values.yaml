@@ -1,0 +1,23 @@
+backend:
+  image: cloudnav-backend
+  tag: latest
+  pullPolicy: IfNotPresent
+  servicePort: 8000
+
+frontend:
+  image: cloudnav-frontend
+  tag: latest
+  pullPolicy: IfNotPresent
+  servicePort: 8501
+  nodePort: 30001
+
+ollama:
+  image: ollama/ollama
+  tag: latest
+  pullPolicy: IfNotPresent
+  servicePort: 11434
+
+config:
+  ollamaHost: "http://ollama-service:11434"
+  chromaDbPath: "/data/chromadb"
+  modelName: "mistral"

@@ -1,0 +1,3 @@
+Migrating from AWS to Azure: Re-architect IAM roles, map EC2 to Azure VMs, S3 to Blob Storage, VPC to VNet with VPN Gateway.
+Multi-cloud best practices: Use Terraform for IaC, containerize apps with Docker and Kubernetes, monitor costs with cloud-native tools.
+AWS to OCI migration: Similar IAM model, map EC2 to OCI Compute, S3 to Object Storage.

@@ -1,0 +1,18 @@
+{
+  "ec2": {
+    "azure": {"service": "Virtual Machines", "tier": "standard"},
+    "oci":  {"service": "Compute", "tier": "standard"}
+  },
+  "s3": {
+    "azure": {"service": "Blob Storage", "tier": "hot"},
+    "oci":  {"service": "Object Storage", "tier": "standard"}
+  },
+  "rds": {
+    "azure": {"service": "Azure SQL Database", "tier": "standard"},
+    "oci":  {"service": "Autonomous Database", "tier": "standard"}
+  },
+  "lambda": {
+    "azure": {"service": "Azure Functions", "tier": "consumption"},
+    "oci":  {"service": "Functions", "tier": "consumption"}
+  }
+}

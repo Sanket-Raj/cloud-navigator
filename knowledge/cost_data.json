@@ -1,0 +1,5 @@
+{
+  "aws": {"monthly": 1200},
+  "azure": {"monthly": 980},
+  "oci": {"monthly": 850}
+}

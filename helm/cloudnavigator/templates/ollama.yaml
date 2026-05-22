@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ollama
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ollama
+  template:
+    metadata:
+      labels:
+        app: ollama
+    spec:
+      containers:
+      - name: ollama
+        image: {{ .Values.ollama.image }}:{{ .Values.ollama.tag }}
+        imagePullPolicy: {{ .Values.ollama.pullPolicy }}
+        ports:
+        - containerPort: {{ .Values.ollama.servicePort }}
+        volumeMounts:
+        - name: ollama-data
+          mountPath: /root/.ollama
+      volumes:
+      - name: ollama-data
+        emptyDir: {}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ollama-service
+spec:
+  selector:
+    app: ollama
+  ports:
+  - port: {{ .Values.ollama.servicePort }}
+    targetPort: {{ .Values.ollama.servicePort }}
